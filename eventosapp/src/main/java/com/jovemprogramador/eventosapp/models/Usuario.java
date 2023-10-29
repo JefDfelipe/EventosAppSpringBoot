@@ -19,6 +19,7 @@ import jakarta.persistence.ManyToMany;
 @Entity
 public class Usuario implements UserDetails {
 
+	@SuppressWarnings("unused")
 	private static final long serialVersionUId = 1L;
 
 	@Id
@@ -39,7 +40,7 @@ public class Usuario implements UserDetails {
 	public UUID getUserId() {
 		return userId;
 	}
-	
+
 	public void setUserId(UUID userId) {
 		this.userId = userId;
 	}
@@ -75,37 +76,31 @@ public class Usuario implements UserDetails {
 
 	@Override
 	public String getPassword() {
-		// TODO Auto-generated method stub
 		return this.senha;
 	}
 
 	@Override
 	public String getUsername() {
-		// TODO Auto-generated method stub
 		return this.login;
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
 	public boolean isEnabled() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
