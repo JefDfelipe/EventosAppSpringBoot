@@ -1,0 +1,54 @@
+
+nav {
+	margin-bottom: 10px;
+	padding-left: 10px;
+	background-color: cornflowerblue;
+}
+
+.detalhesEvento {
+	box-shadow: 0px 0px 5px grey;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 60px;
+}
+
+.formConvidado {
+	box-shadow: 0px 0px 5px grey;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 60px;
+}
+
+.formEvento {
+	box-shadow: 0px 0px 5px grey;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 60px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
+.listaEventos {
+	box-shadow: 0px 0px 5px grey;
+	margin-bottom: 60px;
+}
+
+.tabelaConvidado {
+	width: 60%;
+}
+
+.listaConvidadosTitulo {
+	display: flex;
+	justify-content: center;
+}
+
+.confirm {
+	background-color: #21ba45;
+}
+
+.navbtn {
+	background-color: #0F4780;
+}
