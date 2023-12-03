@@ -79,7 +79,7 @@ public class EventoController {
 			//System.out.println(result.getFieldValue("repitasenha"));
 			
 			usuarioCadastrado = ur.findByLogin(usuario.getLogin()); // verifica se o login já existe cadastrado
-			
+
 			if(usuarioCadastrado != null) {
 				attributes.addFlashAttribute("mensagem", "Login já cadastrado!");
 				return "redirect:/cadastrarUsuario";
