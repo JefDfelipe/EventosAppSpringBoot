@@ -1,57 +1,53 @@
 <!DOCTYPE html>
-<html xmlns:th=“http://thymeleaf.org”xmlns:layout=“http://www.ultraq.net.nz/thymeleaf/layout”>
+<html>
 <head>
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet"
->
-<!--Import materialize.css-->
-<link type="text/css" rel="stylesheet"
-	href="/materialize/css/materialize.min.css" media="screen,projection"
-/>
+	  <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
-<!--Let browser know website is optimized for mobile-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
-<link rel="stylesheet" href="/style/style.css" />
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="style/style.css"/>
 
 <title>Eventos App</title>
 </head>
 <body>
 	<header>
 		<nav>
-			<div class="nav-wrapper">
-				<a href="#" class="brand-logo">Cadastrar Eventos</a>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="/eventos" class="btn navbtn"><i class="material-icons left">format_list_bulleted</i>Lista de Eventos</a></li>
-					<li><a href="/logout" class="btn navbtn"><i class="material-icons left">logout</i>Sair</a></li>
-				</ul>
-			</div>
-		</nav>
+	    <div class="nav-wrapper">
+	      <a href="#" class="brand-logo">Cadastrar Usuario</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="/eventos" class="#e53935 red darken-1 btn "><i class="material-icons left">format_list_bulleted</i>Lista de Eventos</a></li>
+	        <li><a href="/logout" class="#e53935 red darken-1 btn "><i class="material-icons left">logout</i>Sair</a></li>
+	      </ul>
+	    </div>
+	  </nav>
 	</header>
+	
+    <th:block th:include="evento/mensagemValidacao"></th:block>
+    <form  class= "container formEvento" method="post">
+    	<div class="row">
+    		Nome Completo:<input type="text" value="" name ="nomeCompleto" required/>
+    	<div class="input-field col s6">
+    		Login:<input type="text" value=""  name="login"/>
+    	</div>
+    	<div class="input-field col s3">
+    		Senha:<input type="password" value="" placeholder="Senha com minimo 6 digitos"  name="senha"/>    
+    	</div>
+    	<div class="input-field col s3">
+    		Repita a Senha:<input type="password" value="" placeholder="Senha com minimo 6 digitos"  name="repitasenha"/>    
+    	</div>    
+    	
+    </div>	
+    <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+   
+	</form>  
+    
+	
+	
 
-	<th:block th:include="evento/mensagemValidacao"></th:block>
-
-	<form class="container formEvento" method="post">
-		<div class="row">
-			Nome:<input type="text" value="" name="nome" required />
-			<div class="input-field col s6">
-				Local:<input type="text" value="" name="local" />
-			</div>
-			<div class="input-field col s3">
-				Data:<input type="date" value="" name="data" />
-			</div>
-			<div class="input-field col s3">
-				Horário:<input type="time" value="" name="horario" />
-			</div>
-		</div>
-		<button class="waves-effect waves-light btn" type="submit">Salvar</button>
-
-	</form>
-
-
-
-
-	<!--JavaScript at end of body for optimized loading-->
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+ <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>	
 </body>
 </html>
